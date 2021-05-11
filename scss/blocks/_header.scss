@@ -1,0 +1,132 @@
+.header {
+    background-color: $dark-blue;
+
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        min-height: 75px;
+        justify-content: space-between;
+    }
+    
+    &__logo {
+        margin: 18px 41px 20px 0;
+
+        @include tablet {
+            margin: 18px 41px 20px 16px;
+        }
+    }
+    
+    &__loup {
+        margin: 28px 0 19px 0;
+    }
+    
+    &__navigation {
+        display: none;
+    }
+    
+    &-controls {
+        display: flex;
+        position: relative;
+        
+    }
+    
+    &__button {
+        background-color: transparent;
+        fill: white;
+        border: none;
+        margin: 0 34px 0 0;
+
+        @include tablet {
+            margin: 0 25px 0 0;
+        }
+
+        @include mobile {
+            margin: 0 16px 0 0;
+        }
+    }
+    
+    &__button:hover .icon {
+        fill: violet;
+    }
+    
+    &__button:focus .icon {
+        fill: violet;
+    }
+    
+    &__button:hover+.header__navigation {
+        display: block;
+        position: absolute;
+        width: 232px;
+        height: 764px;
+        right: -237px;
+        @include tablet {
+            right: -22px;
+        }
+        top: 52px;
+        background: $white;
+        border: 1px solid blue;
+    }
+    
+    &__button:focus+.header__navigation {
+        display: block;
+        position: absolute;
+        width: 232px;
+        height: 764px;
+        right: -237px;
+        top: 54px;
+        background: $white;
+        border: 1px solid blue;
+    }
+    
+    &__navigation--titlearea{
+        padding: 9px 143px 24px 34px;
+    }
+    
+    &__navigation--wktitlearea {
+        padding: 20px 0 11px 33px;  
+    }
+    
+    &__navigation--title {
+        
+        color: $dark-pink;
+        @include textstyle(14px, 17px);
+        text-decoration: none;
+    }
+    
+    &__navigation--item {
+        color: $brown;
+        @include textstyle(14px, 17px);
+        text-decoration: none;
+    }
+    
+    &__navigation--manarea,
+    &__navigation--womanarea,
+    &__navigation--kidsarea {
+        padding: 7px 0px 0px 55px;
+    }
+    
+    &__person-link{
+        margin: 0 34px 0 0;
+        
+        @include tablet {
+            margin: 0 25px 0 0;  
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__person-basket {
+
+        @include tablet {
+            margin: 0 16px 0 0; 
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+}
+
