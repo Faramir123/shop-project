@@ -1,0 +1,83 @@
+.brand {
+    display: flex;
+    margin: 0 0 65px 0;
+    background-color: $pink;
+        @include tablet {
+            margin: 0 0 19px 0;
+        }
+        @include mobile {
+            margin: 0 0 64px 0;
+        }
+
+    &__man {
+        @include tablet {
+            width: 50%;
+            height: auto;
+        }
+        @include mobile {
+            display: none;
+        }
+    }
+}
+
+
+    .brand__title {
+        @include textstyle(48px, 58px, 900);
+        text-transform: uppercase;
+
+        @include tablet {
+            @include textstyle(44px, 53px, 900); 
+        }
+
+        @include mobile {
+            @include textstyle(38px, 46px, 900); 
+        }
+
+    &-wrapper {
+        padding: 0 0 0 91px;
+        background-color: $pink;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+
+        @include mobile {
+            min-height: 363px;
+            padding: 0;
+        }
+
+    }
+
+    .brand__subtitle {
+        display: block;
+        @include textstyle(37px, 44px, 700);
+
+        @include tablet {
+            @include textstyle(24px, 29px, 700);
+        }
+
+        @include mobile {
+            @include textstyle(20px, 24px, 700);
+        }
+        
+        &-pink {
+            color: $dark-pink;
+        }
+    }
+
+}
+
+
+
+.decor1 {
+    padding: 0 16px 0 0;
+
+    @include tablet {
+        padding: 0 15px 0 39px;
+    }
+
+    @include mobile {
+        padding: 0 15px 0 56px;
+    }
+}
+
+

@@ -1,0 +1,36 @@
+body{
+    font-family: Lato;
+    @include textstyle(16px, 19px);
+    //width: fit-content;
+}
+.container {
+    width: 73%;
+    margin: 0 auto;
+
+    @include tablet {
+
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+}
+
+@media (max-width: $max-tablet-width){
+    .container{
+        width: 96%;
+    }
+}
+
+@media (max-width: $max-mobile-width){
+    .container{
+        width: 92%;
+    }
+}

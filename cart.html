@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
-    <title>Registration</title>
+    <title>Cart</title>
 </head>
 
 <body>
@@ -111,56 +111,88 @@
 
     </header>
     <main>
-
-        <section class="title--registr">
+        <section class="title--registr cart">
             <div class="title--registr_field container">
-                <h1 class="title--registr_h1">registration</h1>
+                <h1 class="title--registr_h1">shopping cart</h1>
             </div>
         </section>
-        <section class="registrationform container">
-
-            <div class="registrationform--field container">
-                <div class="regfield">
-                    <form action="#">
-                        <fieldset class="name">
-                            <legend class="name__legend">Your Name</legend>
-                            <input class="name__firstname inptf" name="user1" type="text" placeholder="    First Name"
+        <div class="maincartfield container">
+            <section class="cartitems">
+                <div class="cartitems__item">
+                    <div class="cartitems__cart">
+                        <img src="img/cart-item1.jpg" alt="cart-item-1" width="262" height="306">
+                        <div class="cartitems__info">
+                            <div class="cartitems__info--h2">
+                                <h2 class="cartitems__info--nameproduct">mango people t-shirt</h2>
+                                <img src="img/krest.png" alt="krest" class="cartitems__info--close" width="18"
+                                    height="18">
+                            </div>
+                            <p class="cartitems__info--price">Price: <span
+                                    class="cartitems__info--price--span">$300</span></p>
+                            <p class="cartitems__info--color">Color: Red</p>
+                            <p class="cartitems__info--size">Size: Xl</p>
+                            <div class="cartitems__info--quantity">
+                                <p class="cartitems__info--quantity-txt">Quantity:</p>
+                                <p class="cartitems__info--quantity-cnt">2</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cartitems__cart">
+                        <img src="img/cart-item-2.jpg" alt="cart-item-2" width="262" height="306">
+                        <div class="cartitems__item">
+                            <div class="cartitems__info">
+                                <div class="cartitems__info--h2">
+                                    <h2 class="cartitems__info--nameproduct">mango people t-shirt</h2>
+                                    <img src="img/krest.png" alt="krest" class="cartitems__info--close" width="18"
+                                        height="18">
+                                </div>
+                                <p class="cartitems__info--price">Price: <span
+                                        class="cartitems__info--price--span">$300</span> </p>
+                                <p class="cartitems__info--color">Color: Red</p>
+                                <p class="cartitems__info--size">Size: Xl</p>
+                                <div class="cartitems__info--quantity">
+                                    <p class="cartitems__info--quantity-txt">Quantity:</p>
+                                    <p class="cartitems__info--quantity-cnt">2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cartitems__btn">
+                        <button class="cartitems__btn--clear"><span class="cartitems_btn--clear-span">clear shopping
+                                cart</span></button>
+                        <button class="cartitems__btn-continue"><span class="cartitems_btn-continue--span">clear
+                                shopping
+                                cart</span></button>
+                    </div>
+            </section>
+            <div class="shippandbasket">
+                <section class="shipping">
+                    <div class="shipbascketfield">
+                        <form class="shipping" action="#">
+                            <legend class="shipping__legend">shipping adress</legend>
+                            <input type="text" name="bangladesh" class="shipping__bangladesh inptf"
+                                placeholder="    Bangladesh" required>
+                            <input type="text" name="state" class="shipping__state inptf" placeholder="    State"
                                 required>
-                            <input class="name__lastname inptf" name="user2" type="text" placeholder="    Last Name"
-                                required>
-                            <input class="name__male" id="radiomale" type="radio" name="sex" required>
-                            <label class="label_male" for="radiomale">Male</label>
-                            <input class="name__female" id="radiofemale" type="radio" name="sex" required>
-                            <label class="label_female" for="radiofemale">Female</label>
-                        </fieldset>
-                        <fieldset class="login--details">
-                            <legend class="login--details__legend">Login details</legend>
-                            <input class="login--details__emale inptf" name="email" type="email" placeholder="    Email"
-                                required>
-                            <input class="login--details__password inptf" name="password" type="password"
-                                placeholder="    Password" required>
-                            <p class="login--details__instruction">Please use 8 or more characters, with at least 1
-                                number
-                                and a mixture of uppercase and lowercase letters</p>
-                        </fieldset>
-                        <button class="browse" type="submit"><span class="browse__txt browseregistr">join
-                                now <img class="strelka" src="img/strelka.png" alt="strelka"></span></button>
-                    </form>
-                </div>
-                <div class="annotation">
-                    <h1 class="annotation__title">loyalty has its perks</h1>
-                    <p class="annotation__info">Get in on the loyalty program where you can earn points and
-                        unlock serious perks. Starting with these as soon as you join:</p>
-                    <ul class="annotation__table">
-                        <li class="annotation__table--item">15% off welcome offer</li>
-                        <li class="annotation__table--item">Free shipping, returns and exchanges on all orders</li>
-                        <li class="annotation__table--item">$10 off a purchase on your birthday</li>
-                        <li class="annotation__table--item">Early access to products</li>
-                        <li class="annotation__table--item">Exclusive offers & rewards</li>
-                    </ul>
-                </div>
+                            <input type="text" name="postcode" class="shipping__postcode inptf"
+                                placeholder="    Postcode / Zip">
+                            <button type="submit" class="shipping__button"><span>get a quote</span></button>
+                        </form>
+                    </div>
+                </section>
+                <section>
+                    <div class="bascket">
+                        <p class="bascket__subtotal">sub total $900</p>
+                        <p class="bascket__grandtotal">grand total <span class="bascket__grandtotal--span">$900</span>
+                        </p>
+                        <hr class="bascket__hr" width="275">
+                        <button class="bascket__button browse" type="button"><span
+                                class="browse__txt browseregistr">proceed to
+                                checkout</span></button>
+                    </div>
+                </section>
             </div>
-        </section>
+        </div>
     </main>
     <footer>
         <section class="footer--contacts ">
