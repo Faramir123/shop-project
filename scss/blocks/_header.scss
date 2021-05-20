@@ -23,6 +23,7 @@
     
     &__navigation {
         display: none;
+        z-index: 100;
     }
     
     &-controls {
@@ -54,12 +55,13 @@
         fill: violet;
     }
     
-    &__button:hover+.header__navigation {
+    &__button:hover+&__navigation {
         display: block;
         position: absolute;
         width: 232px;
         height: 764px;
         right: -237px;
+        z-index: 100;
         @include tablet {
             right: -22px;
         }
@@ -68,7 +70,7 @@
         border: 1px solid blue;
     }
     
-    &__button:focus+.header__navigation {
+    &__button:focus+&__navigation {
         display: block;
         position: absolute;
         width: 232px;
@@ -77,6 +79,10 @@
         top: 54px;
         background: $white;
         border: 1px solid blue;
+        z-index: 100;
+        @include tablet {
+            right: -22px;
+        }
     }
     
     &__navigation--titlearea{

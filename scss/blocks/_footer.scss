@@ -18,6 +18,35 @@
         display: flex;
         flex-direction: column;
         align-items: center;   
+        
+        
+        @include tablet {
+            margin: 0 0 81px 0;   
+        }
+
+        @include mobile {
+            margin: 0 0 48px 0; 
+        }
+    }
+
+    &__item--1 {
+        @include tablet {
+            margin: 48px 0px 48px 0;   
+        }
+
+        @include mobile {
+            margin: 48px 0px 48px 0; 
+        }
+    }
+
+    &__item--3 {
+        @include tablet {
+            margin: 0 0px 64px 0;   
+        }
+
+        @include mobile {
+            margin: 0 0px 81px 0; 
+        }
     }
     
     &__title {
@@ -61,6 +90,15 @@
         width: 360px;
     margin: 30px 0 0 0;
     @include textstyle(20px, 24px);
+    
+    &--cart {
+        @include mobile {
+            @include textstyle(19px, 22px); 
+            padding: 0 0 59px 0;
+            width: 96%;
+
+        }
+    }
     }
     
     &__subscribe--title {
@@ -79,7 +117,11 @@
     }
 }
 
-
+.content__form--cart {
+    @include mobile {
+        width: 91%;
+    }
+}
 
 
 
@@ -122,15 +164,22 @@
     background-color: $dark-blue;
 
     &__right {
-    margin: 30px 0 30px 0;
-    color: $white;
-    @include textstyle(16px, 19px);
+        margin: 30px 0 30px 0;
+        color: $white;
+        @include textstyle(16px, 19px);
+        @include mobile {
+            order: 1;
+            -ms-flex-order: 1;
+        }
     }
     
     &__icon {
         display: flex;
         margin: 30px 0px 30px 0;
-        justify-content: space-;
+
+        @include mobile {
+            margin: 43px 0 48px 0;
+        }
     }
     
     &__icon-item {
@@ -144,5 +193,13 @@
     &-icon {
         display: flex;
         justify-content: space-between;
+
+        @include mobile {
+            order: 2;
+            -ms-flex-order: 2;
+            flex-direction: column;
+            align-items: center;
+            
+        }
     }
 }
