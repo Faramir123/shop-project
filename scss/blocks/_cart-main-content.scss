@@ -37,7 +37,7 @@
         @include mobile {
             margin: 0 0 32px 0;
         }
-        &--img{
+        &-img{
             @include mobile {
                 width: 42%;
                 min-height: 188px;
@@ -53,7 +53,7 @@
         }
     }
 
-    &__info--nameproduct {
+    &__info-nameproduct {
         @include textstyle(24px, 29px);
         text-transform: uppercase;
         padding: 22px 97px 42px 0px;
@@ -69,7 +69,7 @@
             @include textstyle(16px, 19px);
         }
     }
-    &__info--h2 {
+    &__info-h2 {
         display: flex;
         justify-content: space-between;
         @include mobile {
@@ -77,17 +77,17 @@
             padding: 14px 0 26px 0px;
         }
     }
-    &__info--close{
+    &__info-close{
         padding: 26px 22px 0 0;
     }
 
-    &__info--quantity {
+    &__info-quantity {
         display: flex;
     }
 
-    &__info--price, &__info--color, 
-    &__info--size, 
-    &__info--quantity-txt, &__info--quantity-cnt {
+    &__info-price, &__info-color, 
+    &__info-size, 
+    &__info-quantity-txt, &__info-quantity-cnt {
         @include textstyle(22px, 26px);
         padding: 0 24px 6px 0;
 
@@ -96,11 +96,11 @@
         }
     }
 
-    &__info--price--span {
+    &__info-price-span {
         color: $dark-pink;
     }
     
-    &__info--quantity-cnt {
+    &__info-quantity-cnt {
         padding: 0 15px 0 15px;
         border: 1px solid rgba(234, 234, 234, 1)
     }
@@ -119,14 +119,14 @@
 
     }
 
-    &__btn-continue, &__btn--clear {
+    &__btn-continue, &__btn-clear {
         background: transparent;
         border: 1px solid rgba(164, 164, 164, 1);
         @include textstyle(14px, 17px, 300);
         text-transform: uppercase;
     }
 
-    &__btn--clear {
+    &__btn-clear {
         width: 234px;
         height: 50px;
         @include mobile {
@@ -231,19 +231,20 @@
     }
     
     &__hr{
+        width: 275px;
         @include mobile {
             width: 73%;
         }
     }
 }
 
-.right--cart {
+.right-cart {
     @include mobile {
         margin: 0 0 24px 0;
     }
 }
 
-.icon--cart {
+.icon-cart {
     @include mobile {
         margin: 43px 0 25px 0;
     }

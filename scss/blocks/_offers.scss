@@ -55,11 +55,11 @@
         
     }
     
-    &__item--discount {
+    &__item-discount {
         @include textstyle(16px, 19px);
     }
     
-    &__item--sex {
+    &__item-sex {
         color: $dark-pink;
         text-transform: uppercase;
         @include textstyle(24px, 29px, 700);

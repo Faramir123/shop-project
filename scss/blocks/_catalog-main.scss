@@ -1,30 +1,66 @@
-.title--registr {
-    &_field--catalog {
-        display: flex;
-        justify-content: space-between;
-    }
+.registr {
+    &__field {
+        &-catalog {
+            display: flex;
+            justify-content: space-between;
 
-    &__link{
-        text-decoration: none;
-        @include textstyle (14px, 17px, 700);
-        text-transform: uppercase;
-        padding: 65px 0 0 0;
-        &--txt {
-            color: $brown;
+            @include mobile {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
         }
-        &--span {
-            color: $dark-pink;
+        &-link{
+            text-decoration: none;
+            @include textstyle (14px, 17px, 700);
+            text-transform: uppercase;
+            padding: 65px 0 0 0;
+            &-txt {
+                color: $brown;
+            }
+            &-span {
+                color: $dark-pink;
+            }
         }
     }
+    
 }
-
 .catalogfield {
     padding: 51px 0 51px 0;
     display: flex;
+
+    @include tablet {
+        justify-content: space-between;
+    }
+
+    @include mobile {
+        justify-content: end;
+    }
 }
 
+.othermenubtn {
+    display: flex;
+    
+    @include mobile {
+       width: 76%;
+    }
+}
+
+.catalogitem3 {
+    @include tablet {
+        display: none;
+    }
+}
 .filterbutton {
     padding: 0 304px 0 0;
+    
+    @include tablet {
+        padding: 0;
+    }
+
+    @include mobile {
+        width: 13%;
+    }
 }
 
 .filternavi {
@@ -35,29 +71,45 @@
         justify-content: space-between;
         background: none;
         border: none;
-        &--txt {
+
+        @include mobile {
+            width: 38px;
+            height: 25px;
+        }
+
+        &-txt {
             @include textstyle(14px, 17px, 600);
             text-transform: uppercase;
+
+            @include mobile {
+                display: none;
+            }
+        }
+        &-icon-catalog {
+            @include mobile {
+                width: 38px;
+                height: 25px;
+            }
         }
     }
 
-    &__btn:hover &__btn--txt{
+    &__btn:hover &__btn-txt{
         color: $dark-pink;
     }
     
-    &__btn:focus &__btn--txt{
+    &__btn:focus &__btn-txt{
         color: $dark-pink;
     }
 
-    &__btn--icon--catalog {
+    &__btn-icon-catalog {
         fill: $dark-blue;
     }
 
-    &__btn:hover &__btn--icon--catalog{
+    &__btn:hover &__btn-icon-catalog{
         fill: $dark-pink;
     }
     
-    &__btn:focus &__btn--icon--catalog{
+    &__btn:focus &__btn-icon-catalog{
         fill: $dark-pink;
     }
 
@@ -84,22 +136,22 @@
         width: 360px;
         min-height: 531px;
         box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
-        &--div {
+        &-div {
             padding: 0 0 0 4px;
             display: flex;
             align-items: center;
-            &--txt {
+            &-txt {
                 color: $dark-pink;
                 @include textstyle(14px, 17px, 600);
                 text-transform: uppercase;
                 padding: 11px;
             }
 
-            &--icon {
+            &-icon {
                 fill: $dark-pink;
             }
         }
-        &--ul {
+        &-ul {
             padding: 0 16px 0 17px;
             text-decoration: none;
         }
@@ -111,11 +163,14 @@
         
         background: none;
         border: none;
-        &--txt {
+        &-txt {
             @include textstyle(14px, 17px, 400);
             text-transform: uppercase;
+            @include mobile {
+                @include textstyle (13px, 16px);
+            }
         }
-        &--svg{
+        &-svg{
             padding: 0 0 0 10px;
         }
     }
@@ -135,12 +190,63 @@
     }
 }
 
+.trending {
+    @include mobile {
+        width: 34%;
+        padding: 0 0 0 33px;
+    }
+    &__btn {
+        @include mobile {
+            width: 185%;
+        }
+        &-txt {
+            @include mobile {
+                @include textstyle (12px, 14px);
+            }
+        }
+    }
+}
+
 .size {
+    @include mobile {
+        width: 24%;
+        padding: 0 0 0 66px;
+    }
     &__nav {
+        display: none;
         width: 79px;
         min-height: 103px;
         box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+    }
 
+    &__btn {
+        @include mobile {
+            width: 156%;
+        }
+        &-txt {
+            @include mobile {
+                @include textstyle (12px, 14px);
+            }
+        }
+    }
+}
+
+.price {
+    @include mobile {
+        width: 23%;  
+        padding: 0 0 0 26px;
+    }
+
+    &__btn {
+        @include mobile {
+            width: 190%;
+            padding: 0;
+        }
+        &-txt {
+            @include mobile {
+                @include textstyle (12px, 14px);
+            }
+        }
     }
 }
 
@@ -152,7 +258,7 @@
     
     &__category {
         
-        &--div {
+        &-div {
             border: 1px solid rgba(235, 235, 235, 1);
             display: flex;
             align-items: center;
@@ -160,20 +266,20 @@
             margin: 0 0 18px 0;
         }
         
-        &--h2 {
+        &-h2 {
             padding: 0 0 0 11px;
             text-transform: uppercase;
             @include textstyle (14px, 17px, 400);
         }
 
-        &--ul {
+        &-ul {
             display: none;
 
-            &--li {
+            &-li {
                 margin: 0px 0 11px 0;
             }
 
-            &--li--item {
+            &-li-item {
                 @include textstyle (14px, 17px, 400);
                 color: $ptxt-color;
                 padding: 11px 0 0 11px;
@@ -181,22 +287,22 @@
             }
         }        
     }
-    &__category:hover &__category--ul{
+    &__category:hover &__category-ul{
         display: block;
     }
 
-    &__category:hover &__category--h2 {
+    &__category:hover &__category-h2 {
         color: $dark-pink;
     }
 
-    &__category:hover &__category--div {
+    &__category:hover &__category-div {
         margin: 0 0 25px 0;
     }
 
 
     &__brand {
         
-        &--div {
+        &-div {
             border: 1px solid rgba(235, 235, 235, 1);
             display: flex;
             align-items: center;
@@ -204,16 +310,16 @@
             margin: 0 0 18px 0;
         }
 
-        &--h2 {
+        &-h2 {
             padding: 0 0 0 11px;
             text-transform: uppercase;
             @include textstyle (14px, 17px, 400);
         }
 
-        &--ul {
+        &-ul {
             display: none;
 
-            &--item {
+            &-item {
                 @include textstyle (14px, 17px, 400);
                 color: $ptxt-color;
                 padding: 11px 0 0 11px;
@@ -221,41 +327,79 @@
         }
     }
 
-    &__brand:hover &__brand--h2 {
+    &__brand:hover &__brand-h2 {
         color: $dark-pink;
     }
 
-    &__brand:hover &__brand--ul {
+    &__brand:hover &__brand-ul {
         display: block;
     }
 
     &__designer {
-        &--div {
+        &-div {
             display: flex;
             align-items: center;
             border: 1px solid rgba(235, 235, 235, 1);
-            &--h2 {
+            &-h2 {
                 text-transform: uppercase;
                 @include textstyle (14px, 17px, 400);
                 padding: 0 0 0 11px;
             }
 
-            &--ul {
+            &-ul {
                 display: none;
             }
         }
     }
-    &__designer--div:hover &__designer--div--h2 {
+    &__designer-div:hover &__designer-div-h2 {
         color: $dark-pink;
     }
-    &__designer--div:focus &__designer--div--h2 {
+    &__designer-div:focus &__designer-div-h2 {
         color: $dark-pink;
     }
-    &__designer:hover &__designer--ul {
+    &__designer:hover &__designer-ul {
         display: block;
     }
-    &__designer:focus &__designer--ul {
+    &__designer:focus &__designer-ul {
         display: block;
     }
 }
 
+.productbtnlisthidden {
+    display: none;
+}
+
+.productlistbtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid $btnsolid;
+    width: 282px;
+    height: 43px;
+    margin: 48px 0 96px 0;
+    @include mobile {
+        margin: 41px 0 63px 0;
+    }
+    &__prev {
+        border: none;
+        background: transparent;
+        padding: 0 17px 0 15px;
+    }
+
+    &__btnx {
+        border: none;
+        background: transparent;
+
+        &-span {
+            @include textstyle (16px, 19px, 300);
+            color: $ptxt-color;
+        }
+    }
+
+    &__next {
+        border: none;
+        background: transparent;
+        padding: 0 15px 0 15px;
+    }
+}

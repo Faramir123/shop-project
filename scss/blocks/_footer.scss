@@ -63,7 +63,7 @@
 }
 
 
-.footer--contacts {
+.footer-contacts {
     background-image: url(../img/fonefooter.jpg);
     background-repeat: round;
     background-size: cover;
@@ -101,12 +101,12 @@
     }
     }
     
-    &__subscribe--title {
+    &__subscribe-title {
         text-transform: uppercase;
         @include textstyle(24px, 40px, 700);
     }
     
-    &__subscribe--info {
+    &__subscribe-info {
         text-transform: uppercase;
         @include textstyle(18px, 30px);
         padding: 0 0 32px 0;

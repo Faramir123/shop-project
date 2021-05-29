@@ -3,26 +3,29 @@ position: relative;
 z-index: 0;
 }
 
-.title--registr {
+.registr {
 
-    &_field--product {
+    &__field {
+    &-product {
         @include mobile {
             flex-direction: column;
             align-items: center;
         }
     }
-
-    &_h1 {
-        @include mobile {
-            padding: 24px 0 0 0;
+        &-h1 {
+            @include mobile {
+                padding: 24px 0 0 0;
+            }
         }
-    }
-
-    &__link {
-        @include mobile {
-            padding: 32px 0 46px 0;
+    
+        &-link {
+            @include mobile {
+                padding: 32px 0 46px 0;
+            }
         }
-    }
+    
+
+    } 
 }
 
 
@@ -131,11 +134,11 @@ z-index: 0;
         align-items: center;
         width: 211px;
     
-        &--svg {
+        &-svg {
         padding: 0 23px 0 23px;
         }
 
-        &--txt {
+        &-txt {
             color: $dark-pink;
         }
     }

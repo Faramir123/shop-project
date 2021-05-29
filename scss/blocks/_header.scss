@@ -85,30 +85,30 @@
         }
     }
     
-    &__navigation--titlearea{
+    &__navigation-titlearea{
         padding: 9px 143px 24px 34px;
     }
     
-    &__navigation--wktitlearea {
+    &__navigation-wktitlearea {
         padding: 20px 0 11px 33px;  
     }
     
-    &__navigation--title {
+    &__navigation-title {
         
         color: $dark-pink;
         @include textstyle(14px, 17px);
         text-decoration: none;
     }
     
-    &__navigation--item {
+    &__navigation-item {
         color: $brown;
         @include textstyle(14px, 17px);
         text-decoration: none;
     }
     
-    &__navigation--manarea,
-    &__navigation--womanarea,
-    &__navigation--kidsarea {
+    &__navigation-manarea,
+    &__navigation-womanarea,
+    &__navigation-kidsarea {
         padding: 7px 0px 0px 55px;
     }
     
@@ -136,3 +136,6 @@
     }
 }
 
+.li {
+    list-style: none;
+}
