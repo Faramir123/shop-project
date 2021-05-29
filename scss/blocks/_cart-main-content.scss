@@ -1,0 +1,252 @@
+.maincartfield {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 128px 0;
+
+    @include tablet {
+        flex-direction: column;
+    }
+}
+
+.cart {
+    margin: 0 0 96px 0;
+
+    @include tablet {
+        margin: 0 0 59px 0;
+    }
+    @include mobile {
+        margin: 0 0 39px 0;
+    }
+}
+
+.cartitems {
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+        @include tablet {
+            width: 100%;
+        }
+    }
+
+    &__cart {
+        display: flex;
+        min-height: 306px;
+        margin: 0 0 40px 0;
+        box-shadow: 17px 19px 24px 0px rgba(0, 0, 0, 0.13);
+        @include mobile {
+            margin: 0 0 32px 0;
+        }
+        &-img{
+            @include mobile {
+                width: 42%;
+                min-height: 188px;
+            }
+        }
+    }
+
+    &__info {
+        padding: 0px 0 0 31px;
+        width: 100%;
+        @include mobile {
+            padding: 0px 0 0 17px;
+        }
+    }
+
+    &__info-nameproduct {
+        @include textstyle(24px, 29px);
+        text-transform: uppercase;
+        padding: 22px 97px 42px 0px;
+        word-wrap: break-word;
+        width: 262px;
+        @include tablet {
+            width: 64%;
+            padding: 22px 0 42px 0px;
+        }
+        @include mobile {
+            width: 62%;
+            padding: 14px 0 26px 0px;
+            @include textstyle(16px, 19px);
+        }
+    }
+    &__info-h2 {
+        display: flex;
+        justify-content: space-between;
+        @include mobile {
+            width: 100%;
+            padding: 14px 0 26px 0px;
+        }
+    }
+    &__info-close{
+        padding: 26px 22px 0 0;
+    }
+
+    &__info-quantity {
+        display: flex;
+    }
+
+    &__info-price, &__info-color, 
+    &__info-size, 
+    &__info-quantity-txt, &__info-quantity-cnt {
+        @include textstyle(22px, 26px);
+        padding: 0 24px 6px 0;
+
+        @include mobile {
+            @include textstyle(14px, 17px);
+        }
+    }
+
+    &__info-price-span {
+        color: $dark-pink;
+    }
+    
+    &__info-quantity-cnt {
+        padding: 0 15px 0 15px;
+        border: 1px solid rgba(234, 234, 234, 1)
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: space-between;
+        padding: 73px 0 0 0;
+
+        @include tablet {
+            padding: 62px 0 80px 0;
+        }
+        @include mobile {
+            padding: 0 0 64px 0;
+        }
+
+    }
+
+    &__btn-continue, &__btn-clear {
+        background: transparent;
+        border: 1px solid rgba(164, 164, 164, 1);
+        @include textstyle(14px, 17px, 300);
+        text-transform: uppercase;
+    }
+
+    &__btn-clear {
+        width: 234px;
+        height: 50px;
+        @include mobile {
+            width: 49%;
+            height: 33px;
+        }
+    }
+
+    &__btn-continue {
+        width: 224px;
+        height: 49px;
+        @include mobile {
+            width: 49%;
+            height: 33px;
+        }
+    }
+}
+
+.shippandbasket{
+    @include tablet {
+        display: flex;
+        justify-content: space-between;
+    }
+    @include mobile {
+        flex-direction: column;
+    }
+}
+
+.shipping {
+    &__legend{
+        @include textstyle(16px, 19px, 300);
+        text-transform: uppercase;
+        margin: 0 0 21px 0;
+    }   
+
+    &__bangladesh, &__state, &__postcode {
+        @include textstyle(16px, 19px, 300);
+        margin: 0 0 21px 0;
+        border: 1px solid rgba(164, 164, 164, 1)
+    }
+
+    &__bangladesh {
+        @include mobile {
+            width: 96%;
+        }
+    }
+
+    &__state {
+        @include mobile {
+            width: 96%;
+        }
+    }
+
+    &__postcode {
+        @include mobile {
+            width: 96%;
+        }
+    }
+
+    &__button {
+    @include textstyle(11px, 13px, 300);
+    text-transform: uppercase;
+    border: 1px solid rgba(164, 164, 164, 1);
+    background: transparent;
+    width: 100px;
+    height: 34px;
+    }
+}
+
+.bascket {
+    margin: 58px 0 0 0;
+    background: $basketcolor;
+
+    @include mobile {
+        margin: 49px 0 0 0;
+    }
+
+    &__subtotal {
+        @include textstyle();
+        padding: 39px 34px 0 0;
+        text-align: end;
+        text-transform: uppercase;
+    }
+
+    &__grandtotal {
+        @include textstyle(16px, 19px, 700);
+        text-align: end;
+        text-transform: uppercase;
+        padding: 12px 37px 21px 0;
+    }
+    &__grandtotal--span {
+        color: $dark-pink;
+    }
+    &__button {
+        width: 273px;
+        margin: 17px 43px 42px 44px;
+
+        @include mobile {
+            width: 73%;
+
+        }
+    }
+    
+    &__hr{
+        width: 275px;
+        @include mobile {
+            width: 73%;
+        }
+    }
+}
+
+.right-cart {
+    @include mobile {
+        margin: 0 0 24px 0;
+    }
+}
+
+.icon-cart {
+    @include mobile {
+        margin: 43px 0 25px 0;
+    }
+}
+

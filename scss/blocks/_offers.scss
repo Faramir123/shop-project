@@ -1,0 +1,71 @@
+.offers {
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        color: white;
+        width: 31%;
+        min-height: 260px;
+        background-color: $brown;
+        margin: 0 0 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+
+        @include tablet {
+            min-height: 167px;
+            margin: 0 0 19px;
+        }
+
+        @include mobile {
+            width: 100%;
+            min-height: 247px;
+            margin: 0 0 32px 0;
+        }
+
+    &--fon1 {
+        background-image: url(../img/fon1.jpg);
+    }
+    &--fon2 {
+        background-image: url(../img/fon2.jpg);
+    }
+    &--fon3 {
+        background-image: url(../img/fon3.jpg);
+    }
+    &--fon4{
+        background-image: url(../img/fon4.jpg);
+        width: 100%;
+        flex-grow: 1;
+        @include tablet {
+            min-height: 116px;
+        }
+        @include mobile {
+            min-height: 111px;
+        }
+    }
+        
+    }
+    
+    &__item-discount {
+        @include textstyle(16px, 19px);
+    }
+    
+    &__item-sex {
+        color: $dark-pink;
+        text-transform: uppercase;
+        @include textstyle(24px, 29px, 700);
+    }
+}
+
+.cart-wrapper-overlay {
+    position: relative;
+}

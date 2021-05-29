@@ -1,0 +1,227 @@
+.mainproductcontent {
+position: relative;
+z-index: 0;
+}
+
+.registr {
+
+    &__field {
+    &-product {
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+        &-h1 {
+            @include mobile {
+                padding: 24px 0 0 0;
+            }
+        }
+    
+        &-link {
+            @include mobile {
+                padding: 32px 0 46px 0;
+            }
+        }
+    
+
+    } 
+}
+
+
+.slidergalery {
+    &__item--img {
+        width: 100%;
+    }
+}
+
+.sliderpannel{
+    position: relative;
+    width: 100%;
+
+    &__btn {
+        display: flex;
+        justify-content: space-between;
+        position:absolute;
+        top: 50%;
+        width: 100%;
+
+        &--prev,
+        &--next {
+            background: rgba(42, 42, 42, 0.15);
+            border: none;
+            width: 47px;
+            height: 47px;
+        }
+        
+        &--prev--strelka, &--next--strelka {
+            fill: $dark-blue;
+        }
+
+
+        &--prev:hover &--prev--strelka {
+            fill:$dark-pink;
+        }
+        &--prev:focus &--prev--strelka {
+            fill:$dark-pink;
+        }
+
+        &--next:hover &--next--strelka {
+            fill:$dark-pink;
+        }
+        &--next:focus &--next--strelka {
+            fill:$dark-pink;
+        }
+    }
+}
+
+.productinformation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 1);
+    border: solid #FFFFFF;
+    &__h3 {
+        @include textstyle (14px, 17px, 300);
+        color: $dark-pink;
+        text-transform: uppercase;
+        padding: 64px 0 12px 0;
+    }
+        &__redline {
+        background: rgba(239, 91, 112, 1);
+        width: 63px;
+        height: 3px;
+        }
+
+        &__h2 {
+        @include textstyle (18px, 22px, 300);
+        color: $htxt-color;
+        padding: 12px 0 0 0;
+        text-transform: uppercase;
+        }
+
+    &__par {
+        @include textstyle (14px, 17px, 300);
+        color: $ptxt-color;
+        padding: 48px 0 32px 0;
+        width: 47%;
+        text-align: center;
+
+        @include mobile {
+            @include textstyle (14px, 20px);
+            width: 95%;
+        }
+    }
+
+    &__price {
+        @include textstyle (24px, 29px, 300);
+        color: $dark-pink;
+        padding: 0 0 65px 0;
+        @include mobile {
+            @include textstyle (24px, 31px)
+        }
+    }
+
+    &__hr {
+        width: 55%;
+    }
+    
+    &__addtocart {
+        background: transparent;
+        border-color: $dark-pink;
+        height: 47px;
+        display: flex;
+        align-items: center;
+        width: 211px;
+    
+        &-svg {
+        padding: 0 23px 0 23px;
+        }
+
+        &-txt {
+            color: $dark-pink;
+        }
+    }
+}
+
+.menu {
+    padding: 65px 0  49px 0;
+    @include mobile {
+        width: 100%;
+    }
+    &__color, &__size, &__quantity {
+        @include textstyle (14px, 17px, 400);
+        text-transform: uppercase;
+        color: $htxt-color;
+        background: none;
+        border: none;
+        margin: 0 23px 0 0;
+
+        @include mobile {
+            @include textstyle (10px, 12px);
+        }
+    }
+}
+
+.productpage {
+    margin: 193px 0 128px 0;
+    @include tablet {
+        justify-content: space-between;
+    }
+    @include mobile {
+        flex-direction: column;
+    }
+    
+}
+
+.productitem3 {
+    @include tablet {
+        display: none;
+    }
+}
+
+.productitem {
+    @include tablet {
+        width: 48%;
+    }
+
+    @include mobile {
+        width: 98%;
+    }
+
+    &--img{
+        @include tablet {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.content {
+
+    &__contface {
+        @include tablet {
+        padding: 0 0 48px 0;
+        }
+    }
+
+    &__info {
+        @include mobile {
+            width: 92%;
+        }
+    }
+}
+
+
+
+.subemailinpt {
+    @include mobile {
+        width: 72%;
+    }
+}
+
+.submitbtnfooter {
+    @include tablet {
+        width: 28%;
+    }
+}

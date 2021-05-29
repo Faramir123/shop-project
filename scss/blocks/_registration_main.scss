@@ -1,0 +1,161 @@
+/* СТАЛИ ДЛЯ СТРАНИЦ РЕГИСТРАЦИИ (MAIN) */
+
+.registr {
+    min-height: 148px;
+    background-color: $pink;
+
+    &__field {
+
+        @include mobile {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 60px 0 60px 0;
+        }
+
+        &-h1 {
+            padding: 59px 0 60px 0;
+            color: $dark-pink;
+            @include textstyle(24px, 29px);
+            text-transform: uppercase;
+        }
+    }
+
+    
+}
+    
+    
+    
+    .regfield {
+        margin: 0 0 40px 0;
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+        }
+    }
+    .registrationform-field {
+        margin: 64px 0 96px 0;
+        display: flex;
+        justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+
+    .name{
+        &__legend {
+            @include textstyle(16px, 19px, 300);
+            padding: 0 0 21px 0;
+        }
+    
+        &__lastname {
+            margin: 21px 0 32px 0;
+        }
+        
+        &__female {
+            margin: 0 0 0 20px;
+        }
+        
+        &__male {
+            background-color: $dark-pink;
+        }
+    }
+
+    .login{
+        &__details {
+    
+            &-password {
+                margin: 21px 0 16px 0;
+                
+            }
+
+            &-legend {
+                @include textstyle(16px, 19px, 300);
+                padding: 34px 0 21px 0;
+            }
+
+            &-instruction {
+                @include textstyle(13px, 16px, 300);
+                margin: 0 0 39px 0;
+                width: 359px;
+
+                @include mobile {
+                    width: 98%;
+                }
+            }
+        }
+    }
+    
+    .inptf {
+        display: block;
+        width: 360px;
+        height: 45px;
+        @include textstyle(13px, 16px, 300);
+        @include mobile {
+            width: 98%;
+        }
+    }
+    
+    .name__male-label, .name__female-label{
+        @include textstyle();
+    }
+    
+    .browseregistr {
+        text-transform: uppercase;
+
+        @include mobile {
+            width: 49%;
+        }
+        
+    }
+    
+    .strelka {
+        margin: 0 0 0 20px;
+    }
+    
+    .annotation {
+        margin: 0 0 0 128px;
+
+        @include mobile {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+        }
+
+        &__title {
+            text-transform: uppercase;
+            margin: 0 0 22px 0;
+            @include textstyle(24px, 29px, 300);
+
+            @include tablet {
+                @include textstyle(16px, 19px);
+            }
+        }
+        
+        &__info {
+            @include textstyle(24px, 29px, 300);
+            margin: 16px 0 0 0;
+            @include tablet {
+                @include textstyle(16px, 19px);
+            }
+        }
+        &__table-item {
+            @include textstyle(24px, 29px, 300);
+            margin: 16px 0 0 0;
+            @include tablet {
+                @include textstyle(16px, 19px);
+            }
+        }
+        
+        &__table-item::before {
+            content: "✔";
+            margin: 0 23px 0 0;
+        }
+    }
+
